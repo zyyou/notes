@@ -1,0 +1,18 @@
+{
+  "name": "notes",
+  "version": "1.0.0",
+  "description": "> An awesome project.",
+  "scripts": {
+    "dev": "docsify serve docs --port 8888"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zyyou/notes.git"
+  },
+  "author": "zyy",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/zyyou/notes/issues"
+  },
+  "homepage": "https://github.com/zyyou/notes#readme"
+}
