@@ -22,7 +22,7 @@
       loadSidebar: '_sidebar.md',  //自定义边栏
       subMaxLevel: 2, //自定义侧边栏后默认不会再生成目录，你也可以通过设置生成目录的最大层级开启这个功能。
       auto2top: true, //切换页面后自动切换到页面顶部
-      logo: '/_media/icon.svg', //侧边栏LOGO
+      //logo: '/_media/icon.svg', //侧边栏LOGO
       paths: 'auto',
       //coverpage: true,
       executeScript: true,
@@ -31,14 +31,12 @@
         depth:4,
         maxAge: 600000, // 索引过期时间，单位毫秒，默认一天
         noData: {
-          '/de-de/': 'Keine Ergebnisse!',
-          '/zh-cn/': '没有结果!',
-          '/': 'No results!'
+          '/': '没有结果!',
+          '/en/': 'No results!'
         },
         placeholder: {
-          '/de-de/': 'Suche',
-          '/zh-cn/': '搜索',
-          '/': 'Search'
+          '/': '搜索',
+          '/en': 'Search'
         }
       },
       //homepage:'',  //自定义首页

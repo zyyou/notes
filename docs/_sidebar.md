@@ -13,5 +13,5 @@
 - 开发工具
   - [VSCode](vscode.md)
 
-
-- [其他](other.md)
+- 其他
+    - [还没有](other.md)
