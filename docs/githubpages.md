@@ -6,7 +6,7 @@ npm i docsify-cli -g
 ## 初始化项目
 ```
 docsify init ./notes    //当前目录下生成 notes 工程
-ce notes
+cd notes
 npm init    //生成package.json
 ```
 编辑scripts，用于启动本地预览，参考
