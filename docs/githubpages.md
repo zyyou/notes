@@ -32,6 +32,12 @@ npm init    //生成package.json
 
 ```
 
+## 启动预览
+命令行进入目录后执行
+```
+npm run dev
+```
+
 ## 配置
 参考
 ```js
