@@ -1,4 +1,4 @@
-- 开发环境搭建
+- 开发环境
   - [CentOS](centos.md)
   - [Git多账号](git.md)
 
