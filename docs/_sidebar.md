@@ -13,3 +13,5 @@
 
 - 其他
     - [GitHubPages搭建文档系统](githubpages.md)
+    - [命令行制作启动盘](dd.md)
+    - [wine](wine.md)
