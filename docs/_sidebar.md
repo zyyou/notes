@@ -1,5 +1,6 @@
 - 开发环境
   - [CentOS](centos.md)
+  - [Ubuntu](ubuntu.md)
   - [Git多账号](git.md)
 
 - Nodejs
