@@ -1,3 +1,11 @@
+## 同步设置
+- 安装插件 Settings Sync
+- 输入命令 sync，选择上传设置，自动打开github Developer settings
+- github创建 Personal access tokens
+- token输入vscode命令框，回车
+
+
+
 ## 常用插件
 - Auto Rename Tag   修改html标签，自动帮你完成尾部闭合标签的同步修改，和webstorm一样。- 
 - Auto Close Tag   自动闭合HTML标签- 
