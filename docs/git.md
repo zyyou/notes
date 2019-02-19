@@ -47,3 +47,20 @@ git config --local user.email "***@**.**"
 ```
 ssh -T git@code.aliyun.com
 ```
+
+## 常用命令
+```
+git pull    //拉取
+git branch dev  //创建dev分支
+git push origin dev //提交到远程分支dev
+git checkout dev    //切换到dev分支
+git add -A  //暂存本地所有更改
+git commit -m 备注  //提交本地暂存更改
+
+git merge dev   //将dev分支合并到当前分支
+git branch -d dev   //删除本地分支 dev
+git push origin --delete dev    //删除远程分支dev
+
+
+
+```
