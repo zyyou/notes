@@ -27,6 +27,7 @@ sudo apt upgrade
 ```
 sudo apt install gnome-shell-extensions gnome-shell-extension-dash-to-panel gnome-tweaks adwaita-icon-theme-full
 ```
+- 重启
 - 启用扩展 Dash to panel
 
 ## 安装搜狗输入法
