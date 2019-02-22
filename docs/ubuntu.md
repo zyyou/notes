@@ -51,3 +51,9 @@ sudo apt install fcitx-table
 - 软件容器下载
 下载后直接点击deb安装
 http://mirrors.aliyun.com/deepin/pool/non-free/d
+
+- 显示托盘图标
+```
+sudo apt-get install gnome-shell-extension-top-icons-plus gnome-tweaks
+```
+然后 alt+f2 输入r重启gnome-shell
