@@ -50,7 +50,8 @@ ssh -T git@code.aliyun.com
 
 ## 常用命令
 ```
-git pull    //拉取
+git pull    //拉取并自动合并
+git fetch   //拉取不自动合并
 git branch dev  //创建dev分支
 git push origin dev //提交到远程分支dev
 git checkout dev    //切换到dev分支
@@ -62,5 +63,8 @@ git branch -d dev   //删除本地分支 dev
 git push origin --delete dev    //删除远程分支dev
 
 
+git checkout -- test.txt    //撤销未暂存的文件 test.txt
+git reset HEAD test.txt    //移除暂存文件test.txt(保持编辑后内容)
+git rm --cached test.txt    //从暂存区移除文件test.txt（状态为编辑后且未git add）
 
 ```
