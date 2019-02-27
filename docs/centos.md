@@ -40,7 +40,7 @@ yum install -y epel-release
 yum install -y nodejs
 
 npm install n -g        //安装node版本管理工具
-n stable        //更新node最新稳定版本，latest 最新版
+n stable        //更新node最新稳定版本，lts 最新长期维护版
 ```
 
 ## 安装git
