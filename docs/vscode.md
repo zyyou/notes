@@ -29,6 +29,7 @@
 - Path Intellisense   自动路径补全、默认不带这个功能- 
 - Project Manager   多个项目之间快速切换的工具- 
 - Pug(Jade) snippets   pug语法提示- 
+- REST Client   类似postman
 - React Components   根据文件名创建反应组件代码。- 
 - React Native Tools    reactNative工具类为React Native项目提供了开发环境。- 
 - Stylelint   css/sass代码审查- 
