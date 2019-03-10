@@ -8,11 +8,16 @@ const koajwt = require('koa-jwt');
 const jwtRefresh = require('./lib/middlewares/jwt-refresh');
 
 //中间件引用放在最顶端，具体查koa洋葱模型
+// unless按http method、扩展名、路径忽略验证，支持正则
 app.use(koajwt({
   secret: appConfig.tokenKey
 }).unless({
-  path: [/\/index/,/\/test/,/\/ttt/,/\/jwttest\/login/]  //忽略token验证
+  method: [],
+  ext: ['.css', '.js', '.png', '.jpg'],
+  path: ['/',
+    /\/index/, /\/test/, /\/ttt/, /\/jwttest\/login/]
 }));
+
 
 //刷新中间件
 app.use(jwtRefresh);
