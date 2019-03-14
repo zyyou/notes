@@ -82,6 +82,7 @@ https://docsify.js.org/#/zh-cn/quickstart
 - 创建仓库
 - 设置仓库，找到GitHub Pages项
 - Source 选 master branch /docs folder
+- 关闭主题：在docs目录下新建空文件，文件名：.nojekyll
 至此已完成，可使用GitHub域名访问，如： https://zyyou.github.io/notes/
 
 ## 配置自定义域名访问
