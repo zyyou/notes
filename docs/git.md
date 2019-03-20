@@ -68,3 +68,12 @@ git reset HEAD test.txt    //移除暂存文件test.txt(保持编辑后内容)
 git rm --cached test.txt    //从暂存区移除文件test.txt（状态为编辑后且未git add）
 
 ```
+
+## 常见问题
+- There is no tracking information for the current branch.
+```text
+原因：本地分支没有和远程分支建立联系
+git branch -vv 查看本地分支和远程分支的关联关系
+本地dev关联到远程dev：
+git branch --set-upstream-to=origin/dev dev
+```
