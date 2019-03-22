@@ -6,6 +6,7 @@
 - Nodejs
   - [使用pm2部署nodejs](pm2.md)
   - [koa-jwt](koajwt.md)
+  - [其他](nodejs.md)
 
 - 数据库
   - [mongodb](mongodb.md)
