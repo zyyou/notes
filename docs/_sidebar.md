@@ -9,6 +9,7 @@
 
 - 数据库
   - [mongodb](mongodb.md)
+  - [redis](redis.md)
 
 - 开发工具
   - [VSCode](vscode.md)
