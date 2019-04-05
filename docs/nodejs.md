@@ -1,3 +1,11 @@
+## 常用开发包
+```shell
+# 静态服务器 serve
+serve .dist
+
+
+```
+
 ## CERT_UNTRUSTED 错误
 安装模块报错
 ```
