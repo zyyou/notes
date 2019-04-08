@@ -5,5 +5,5 @@
 ![web](https://img.shields.io/website/https/note.bianchengke.com.svg)
 
 # 浏览
- https://zyy.js.org
- https://note.bianchengke.com 
+ - https://zyy.js.org
+ - https://note.bianchengke.com 
