@@ -60,7 +60,7 @@ module.exports = {
 const test = require('./test.js');
 
 window.runTest = () => {
-    document.querySelector("#root").appendChild(test());
+    document.querySelector('#root').appendChild(test());
 }
 ```
 
@@ -68,7 +68,7 @@ window.runTest = () => {
 ```javascript
 module.exports = function() {
     var test = document.createElement('div');
-    test.textContent = "这是test输出的字符串";
+    test.textContent = '这是test输出的字符串';
     return test;
   };
 ```
