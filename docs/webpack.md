@@ -83,3 +83,66 @@ script 节点下增加以下配置
 ```shell
 npm run build
 ```
+
+## 打包less
+
+- 安装loader
+注意extract-text-webpack-plugin，webpack4不支持extract-text-webpack-plugin3，所以要用最新beta版
+```shell
+npm install less less-loader style-loader css-loader url-loader file-loader extract-text-webpack-plugin@next -D
+```
+
+- 配置
+```javascript
+const path = require('path');
+const ExtractTextPlugin = require("extract-text-webpack-plugin");
+
+module.exports = {
+  mode: 'development', //development production
+  entry: {
+    default: './src_front/themes/default.less',
+    blue: './src_front/themes/blue.less'
+  },
+  output: {
+    filename: 'js/[name].js',
+    path: path.resolve(__dirname, 'public')
+  },
+  module: {
+    rules: [{
+      test: /\.(js|jsx)$/,
+      use: ['babel-loader'],
+      include: path.resolve(__dirname, './src_front')
+    },
+    {
+      test: /\.css$/,
+      use: ExtractTextPlugin.extract({
+        fallback: 'style-loader', // 回滚
+        use: 'css-loader',
+        publicPath: '../' //解决css背景图的路径问题
+      })
+    },
+    {
+      test: /\.less$/,
+      use: ExtractTextPlugin.extract({ //分离less编译后的css文件
+        fallback: 'style-loader',
+        use: ['css-loader', 'less-loader']
+      })
+    },
+    {
+      test: /\.(png|jpg|gif)$/,
+      use: [{
+        loader: 'url-loader',
+        options: { // 这里的options选项参数可以定义多大的图片转换为base64
+          limit: 15000, // 表示小于15kb的图片转为base64,大于50kb的是路径
+          outputPath: '/', //定义输出的图片文件夹
+          name: '[path][name].[ext]'
+        }
+      }]
+    }
+    ]
+  },
+  plugins: [
+    new ExtractTextPlugin('themes/[name]/main.css')
+  ]
+};
+```
