@@ -1,5 +1,5 @@
 ## 安装
-```
+```shell
 npm install -g pm2
 ```
 
@@ -9,7 +9,7 @@ npm install -g pm2
 ## 配置文件
 - 本地工程创建配置文件：pm2 ecosystem
 - 编辑配置文件，示例：
-```js
+```javascript
 module.exports = {
   apps : [{
     //项目名称
@@ -76,11 +76,17 @@ module.exports = {
 
 ## 初始化服务器
 首次部署，工程目录执行（ecosystem.config.js所在目录）
-```
+```shell
 pm2 deploy dev121 setup
 ```
 
 ## 更新部署
-```
+```shell
 pm2 deploy dev121
+
+# 回滚1
+pm2 deploy dev121 revert 1
+
+# 远程执行指令
+pm2 deploy dev121 exec "npm install"
 ```
