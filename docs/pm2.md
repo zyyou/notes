@@ -90,3 +90,13 @@ pm2 deploy dev121 revert 1
 # 远程执行指令
 pm2 deploy dev121 exec "npm install"
 ```
+
+## 随系统启动
+
+```shell
+# 保存当前启动的应用
+pm2 save
+
+# 随系统启动
+pm2 startup
+```
