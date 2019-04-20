@@ -1,5 +1,5 @@
 ## 为什么不用sinopia
-sinopia已经停止维护，而且坑比较多，包括安装阶段，verdaccio是sinopia的分支，当前在维护中
+sinopia已经停止维护，而且坑比较多，包括安装阶段，verdaccio是sinopia的分支，发稿前在维护中
 
 ## 安装与启动
 搭建nodejs和npm环境，然后全局安装
