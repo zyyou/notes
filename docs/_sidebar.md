@@ -9,6 +9,7 @@
   - [koa-jwt](koajwt.md)
   - [webpack](webpack.md)
   - [react](react.md)
+  - [npm私有仓库](verdaccio.md)
   - [其他](nodejs.md)
 
 - 数据库
