@@ -12,13 +12,31 @@ redis-server -v
 chkconfig redis on
 ```
 
-## 客户端
+## 客户端常用指令
 ```shell
 # -a 指定密码
 redis-cli -h 127.0.0.1 -p 6379 -a 123456
 
 # 列出所有key
 keys *
+
+# 检查是否存在key
+exists key
+
+# 设置key值
+set key value
+
+# 读key值
+get key
+
+# 删除key
+del key
+
+# 当前库中key总数
+dbsize
+
+# 选择0-15的库(redis-cli会在指令前显示当前库，如[1]，默认0不显示)
+select index
 
 ```
 
