@@ -77,3 +77,21 @@ git branch -vv 查看本地分支和远程分支的关联关系
 本地dev关联到远程dev：
 git branch --set-upstream-to=origin/dev dev
 ```
+
+- 用错分支没commit
+用错分支还写了很多代码的情况
+```shell
+git add -A
+# 提交到暂存栈
+git stash
+git checkout 目标分支
+# 提出代码s
+git stash pop
+```
+
+- 用错分支并且已经提交
+```shell
+git reset HEAD~1 
+git stash
+# 后面同上
+```
