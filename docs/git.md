@@ -95,3 +95,18 @@ git reset HEAD~1
 git stash
 # 后面同上
 ```
+
+- 大小写重命名
+不推荐修改配置为大小写敏感，默认true不敏感
+```shell
+# 不推荐
+git config core.ignorecase false
+
+# 推荐，执行两次 Aaa.txt-> aaa.txt
+git mv Aaa.txt bbb.txt && git mv bbb.txt aaa.txt
+
+# 重命名目录
+git mv -f Aaa aaa1 && git mv -f aaa1 aaa
+
+
+```
