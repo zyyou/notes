@@ -98,6 +98,7 @@ git stash
 
 - 大小写重命名
 不推荐修改配置为大小写敏感，默认true不敏感
+
 ```shell
 # 不推荐
 git config core.ignorecase false
@@ -107,6 +108,4 @@ git mv Aaa.txt bbb.txt && git mv bbb.txt aaa.txt
 
 # 重命名目录
 git mv -f Aaa aaa1 && git mv -f aaa1 aaa
-
-
 ```
