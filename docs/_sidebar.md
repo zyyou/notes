@@ -6,7 +6,6 @@
 - Nodejs及前端相关
   - [使用pm2部署nodejs](pm2.md)
   - [koa-jwt](koajwt.md)
-  - [koa-jwt](koajwt.md)
   - [webpack](webpack.md)
   - [react](react.md)
   - [npm私有仓库](verdaccio.md)
