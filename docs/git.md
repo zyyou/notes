@@ -108,3 +108,15 @@ git mv Aaa.txt bbb.txt && git mv bbb.txt aaa.txt
 # 重命名目录
 git mv -f Aaa aaa1 && git mv -f aaa1 aaa
 ```
+
+- 回退版本
+
+```shell
+# 备份当前分支
+git branch dev-backup
+# 回退
+git reset --hard 49dd91252ac662de2e01a1415d2d95f931ac03ef
+# 强制提交
+git push -f -u origin dev 
+```
+
