@@ -92,6 +92,7 @@ pm2 deploy dev121 exec "npm install"
 ```
 
 ## 随系统启动
+必须root执行
 
 ```shell
 # 保存当前启动的应用
@@ -99,4 +100,7 @@ pm2 save
 
 # 随系统启动
 pm2 startup
+
+# 以其它账号启动，先在git账号下save，然后root执行
+pm2 startup -u git --hp /home/git
 ```
