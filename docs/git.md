@@ -68,6 +68,7 @@ git reset HEAD test.txt    //移除暂存文件test.txt(保持编辑后内容)
 git rm --cached test.txt    //从暂存区移除文件test.txt（状态为编辑后且未git add）
 
 git commit --amend  //修复提交（修改提交备注、添加文件等）
+git remote set-url origin 新地址    //更新远程仓库地址
 
 ```
 
