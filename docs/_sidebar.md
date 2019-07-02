@@ -2,6 +2,7 @@
   - [CentOS](centos.md)
   - [Ubuntu](ubuntu.md)
   - [Git多账号](git.md)
+  - [Docker](docker.md)
 
 - Nodejs及前端相关
   - [使用pm2部署nodejs](pm2.md)

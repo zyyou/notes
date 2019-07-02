@@ -50,6 +50,7 @@ ssh -T git@code.aliyun.com
 
 ## 常用命令
 ```
+git clone --depth 1 仓库地址    //clone最近1次提交的代码
 git pull    //拉取并自动合并
 git fetch   //拉取不自动合并
 git branch dev  //创建dev分支
