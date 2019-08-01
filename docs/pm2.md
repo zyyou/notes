@@ -104,3 +104,62 @@ pm2 startup
 # 以其它账号启动，先在git账号下save，然后root执行
 pm2 startup -u git --hp /home/git
 ```
+
+## 模块相关命令
+```shell
+# 安装pm2-webhooks模块
+pm2 install pm2-webhooks
+
+# 查看pm2-webhooks模块配置
+pm2 conf pm2-webhooks
+
+# 卸载模块
+pm2 uninstall pm2-webhooks
+
+# 修改模块配置项，会自动重启模块（存储在 ~/.pm2/module_conf.json）
+pm2 set <module-name>:<attr> <val>
+
+# 查看模块配置
+pm2 conf [module-name]
+
+# 创建演示模块
+pm2 module:generate pm2-module-demo
+
+# 发布模块 (Inc Semver + Git push + NPM publish)
+pm2 publish
+
+```
+
+## 模块配置文件package.json
+
+```javascript
+{
+  "name": "sample-module",
+  "version": "1.0.0",
+  "description": "PM2 Sample Module",
+  "main": "app.js",
+  "dependencies": {
+    "pmx": "beta"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/keymetrics/pmx.git"
+  },
+  "config": { //模块配置项，可通过pm2 set修改
+    "conf_var_1": true,
+    "conf_var_2": "myvalue"
+  },
+  "apps": [ //模块运行行为配置
+    {
+      "autorestart": true,
+      "exec_mode": "fork",
+      "merge_logs": true,
+      "max_memory_restart": "200M",
+      "script": "app.js"
+    }
+  ],
+  "author": "Keymetrics Inc.",
+  "license": "MIT"
+}
+
+```
