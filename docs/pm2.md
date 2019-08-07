@@ -84,6 +84,9 @@ pm2 deploy dev121 setup
 ```shell
 pm2 deploy dev121
 
+# 忽略本地更改，强制部署
+pm2 deploy dev121 --force
+
 # 回滚1
 pm2 deploy dev121 revert 1
 
