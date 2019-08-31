@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "学习笔记",
   "scripts": {
-    "dev": "docsify serve docs --port 8888"
+    "dev": "./node_modules/.bin/serve docs -l 8888"
   },
   "repository": {
     "type": "git",
@@ -14,5 +14,8 @@
   "bugs": {
     "url": "https://github.com/zyyou/notes/issues"
   },
-  "homepage": "https://github.com/zyyou/notes#readme"
+  "homepage": "https://github.com/zyyou/notes#readme",
+  "dependencies": {
+    "serve": "^11.1.0"
+  }
 }
