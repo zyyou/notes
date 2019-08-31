@@ -7,6 +7,7 @@
 
 
 ## 常用插件
+- Remote Development 远程开发
 - Auto Rename Tag   修改html标签，自动帮你完成尾部闭合标签的同步修改，和webstorm一样。- 
 - Auto Close Tag   自动闭合HTML标签- 
 - Beautiful   格式化代码的工具- 
