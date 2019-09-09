@@ -18,10 +18,28 @@ docker ps -a
 /usr/lib/systemd/system/docker.service
 ```
 
-- 参考
+## 创建镜像
+
+```shell
+# Dockerfile 目录下执行
+docker build . -t imagename
+```
+
+- Dockerfile参考
+基于alinode，暴露10001端口，注意服务不能后台，否则容器会退出
+
+```shell
+FROM alinode
+MAINTAINER zhengyy@9186.com
+COPY eggtest /root/eggtest
+WORKDIR /root/eggtest
+EXPOSE 10001
+CMD ["npm","start"]
+```
 
 ## 常用命令
 ```shell
+docker run -d -p 5001:10001 eggtest #启动后台运行容器，将宿主5001端口映射到容器10001端口
 docker info # 列出信息
 docker version  # 版本
 docker ps -a   # 列出所有容器
