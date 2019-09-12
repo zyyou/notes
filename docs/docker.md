@@ -37,6 +37,22 @@ EXPOSE 10001
 CMD ["npm","start"]
 ```
 
+## 搭建Harbor私有镜像仓
+- 下载离线包 https://github.com/goharbor/harbor/releases
+- 解压，修改配置文件，主要：hostname、harbor_admin_password、db_password
+- 启动，install.sh
+- 
+```shell
+# 修改启用非https push：/usr/lib/systemd/system/docker.service
+ExecStart=/usr/bin/dockerd --insecure-registry 192.168.*.*
+
+systemctl  daemon-reload
+service docker stop
+service docker start
+docker-compose start
+```
+
+
 ## 常用命令
 ```shell
 docker run -d -p 5001:10001 eggtest #启动后台运行容器，将宿主5001端口映射到容器10001端口
