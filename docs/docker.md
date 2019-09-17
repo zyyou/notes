@@ -41,7 +41,7 @@ CMD ["npm","start"]
 - 下载离线包 https://github.com/goharbor/harbor/releases
 - 解压，修改配置文件，主要：hostname、harbor_admin_password、db_password
 - 启动，install.sh
-- 
+
 ```shell
 # 修改启用非https push：/usr/lib/systemd/system/docker.service
 ExecStart=/usr/bin/dockerd --insecure-registry 192.168.*.*
