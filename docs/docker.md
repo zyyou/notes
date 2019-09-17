@@ -50,6 +50,11 @@ systemctl  daemon-reload
 service docker stop
 service docker start
 docker-compose start
+
+# 登录
+docker login 192.168.*.*
+# 推送
+docker push 192.168.5.165/heechain/XXX
 ```
 
 
