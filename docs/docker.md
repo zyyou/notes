@@ -60,6 +60,7 @@ docker push 192.168.5.165/heechain/XXX
 
 ## 常用命令
 ```shell
+docker exec -it XXX /bin/bash   # 进入容器
 docker run -d -p 5001:10001 eggtest #启动后台运行容器，将宿主5001端口映射到容器10001端口
 docker info # 列出信息
 docker version  # 版本
