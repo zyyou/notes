@@ -22,6 +22,11 @@ Host github.com
     IdentityFile /Users/zyy/.ssh/id_rsa_bb
 ```
 
+## config权限
+```
+sudo chmod 600 config
+```
+
 ## 添加到agent
 把所有的id_rsa私钥文件添加到SSH-Agent，命令如下：
 ```
