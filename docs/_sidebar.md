@@ -1,3 +1,6 @@
+- 区块链
+  - [以太坊环境搭建](eth.md)
+
 - 开发环境
   - [CentOS](centos.md)
   - [Ubuntu](ubuntu.md)
@@ -19,9 +22,6 @@
 
 - 开发工具
   - [VSCode](vscode.md)
-
-- 区块链
-  - [以太坊环境搭建](eth.md)
 
 - 其他
     - [GitHubPages搭建文档系统](githubpages.md)
