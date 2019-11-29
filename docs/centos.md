@@ -69,9 +69,20 @@ firewall-cmd --zone=public --remove-port=3000/tcp --permanent
 ## SSH登录
 - 参考git <a href="#/git?id=ssh-key配置">SSH-KEY配置</a> 生成秘钥 如id_rsa_dev，然后执行下面命令
 - 如果没权限可以直接复制 id_rsa_dev.pub 的内容到对应服务器账号下，如/root/.ssh/下并改名为authorized_key（已存在就追加
+
 ```
 ssh-copy-id -i ~/.ssh/id_rsa_dev.pub root@服务器IP    
-ssh root@服务器IP   //测试，正常情况下此时已登录服务器不需要密码
+ssh root@服务器IP   //测试，正常情况下此时已登录服务器不需要密码，报权限问题注意 SELinux
+
+```
+- 解决登录慢问题
+
+```text
+/etc/ssh/sshd_config
+GSSAPIAuthentication no
+UseDNS no
+
+systemctl restart sshd
 ```
 
 ## mysql8 

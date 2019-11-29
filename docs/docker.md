@@ -9,6 +9,9 @@ sudo systemctl start docker
 # 执行测试镜像
 sudo docker run hello-world
 docker ps -a
+
+# 开机自启动
+systemctl enable docker
 ```
 
 ## 配置文件
