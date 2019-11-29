@@ -63,6 +63,7 @@ geth init ./genesis.json --datadir /root/eth/data
 
 ## 启动节点
 - 后台运行
+
 ```shell
 # 控制台消息会写入到 nohup.out
 nohup geth --config /root/eth/config.toml &

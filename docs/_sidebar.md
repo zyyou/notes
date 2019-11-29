@@ -1,5 +1,5 @@
 - 区块链
-  - [以太坊环境搭建](eth.md)
+  - [以太坊环境](eth.md)
 
 - 开发环境
   - [CentOS](centos.md)
