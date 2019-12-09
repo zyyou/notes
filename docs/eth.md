@@ -10,7 +10,7 @@
 - 执行以下脚本生成配置文件
 
 ```shell
-geth --identity "zyytest" --networkid 123 \
+geth --identity "zyytest" --networkid 123 --allow-insecure-unlock \
     --port '30303' --syncmode 'fast' --nodiscover --maxpeers 0 \
     --rpc --rpcaddr '0.0.0.0' --rpcport 8545 --rpcapi 'db,eth,net,web3,personal' --rpccorsdomain '*' \
     --ws --wsaddr '0.0.0.0' --wsport 8546 --wsapi 'db,eth,net,web3,personal' --wsorigins '*' \
@@ -66,7 +66,12 @@ geth init ./genesis.json --datadir /root/eth/data
 
 ```shell
 # 控制台消息会写入到 nohup.out
-nohup geth --config /root/eth/config.toml &
+# --allow-insecure-unlock 解决解锁账户异常：account unlock with HTTP access is forbidden
+# --dev 有交易才挖矿
+# --dev.period 1 持续挖矿，默认0
+nohup geth --config /root/eth/config.toml \
+    --dev --dev.period 0 \
+    --datadir /root/eth/data --allow-insecure-unlock &
 
 # 查看nohup.out中ipc路径，如：
 # IPC endpoint opened                      url=/root/eth/data/geth.ipc
@@ -100,5 +105,11 @@ eth.coinbase
 miner.start(1)
 # 停止挖矿
 miner.stop()
+
+# 解锁账户
+personal.unlockAccount(eth.accounts[0], 'XXX')
+
+# 转账
+eth.sendTransaction({from: eth.accounts[0] , to: eth.accounts[1], value: web3.toWei(1,"ether")})
 
 ```
